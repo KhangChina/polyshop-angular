@@ -1,0 +1,72 @@
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="exampleModal"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="staticBackdropLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form action="" (ngSubmit)="changeDetail(detailForm)" #detailForm="ngForm">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModal">
+          {{ product.name | uppercase }}
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Code</label>
+            <input type="text" class="form-control" name="id" placeholder="10" [(ngModel)]="product.id" />
+          </div>
+          <div class="col-md-6">
+            <label for="inputPassword4" class="form-label">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              name="name"
+              placeholder="Name Products"
+              [(ngModel)]="product.name"
+            />
+          </div>
+          <div class="col-12">
+            <label for="inputAddress" class="form-label">Description</label>
+            <textarea 
+              type="text"
+              class="form-control"
+              id="description"
+              name="description"
+              placeholder="Description"
+              [(ngModel)]="product.description"
+            ></textarea>
+          </div>
+          <div class="col-12">
+            <label for="inputAddress2" class="form-label">Image URL</label>
+            <input type="text" class="form-control" name="url" [(ngModel)]="product.url"/>
+          </div>
+         
+        </div>
+      </div>
+      
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+        <button type="submit" class="btn btn-primary">Add</button>
+      </div>
+    </form>
+    </div>
+  </div>
+</div>
+
+<!-- <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
