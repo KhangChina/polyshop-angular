@@ -11,7 +11,7 @@ export class ProductListComponent implements OnInit {
   productSelect: Product = new Product('','','','')
 
   constructor() {
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 20; i++) {
       const test : Product = {
         id:faker.datatype.uuid(),
         name:faker.commerce.productName(),

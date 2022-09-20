@@ -1,4 +1,4 @@
-<div class="row">
+
   <div class="row row-cols-1 row-cols-md-4 g-4">
     <div class="col" *ngFor="let item of products">
       <div class="card">
@@ -7,11 +7,16 @@
           <h5 class="card-title">{{ item.name }}</h5>
           <p class="card-text text-truncate">{{ item.description }}</p>
           <button type="button" class="btn btn-primary" (click)="onSelect(item)" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Action
+            View
           </button>
+
+          <a class="btn btn-primary"  [routerLink]="['/productdetail/'+ item.id]">
+            Edit
+          </a>
+
         </div>
       </div>
     </div>
   </div>
-</div>
+
 <app-product-detail [product] = 'productSelect'></app-product-detail>
