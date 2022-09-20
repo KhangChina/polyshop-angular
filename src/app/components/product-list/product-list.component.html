@@ -6,14 +6,18 @@
         <div class="card-body">
           <h5 class="card-title">{{ item.name }}</h5>
           <p class="card-text text-truncate">{{ item.description }}</p>
-          <button type="button" class="btn btn-primary" (click)="onSelect(item)" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            View
-          </button>
+       
 
-          <a class="btn btn-primary"  [routerLink]="['/productdetail/'+ item.id]">
-            Edit
-          </a>
+          
 
+              <button type="button " class="btn btn-primary me-1" (click)="onSelect(item)" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                View
+              </button>
+
+              <button type="button"  class="btn btn-primary"  [routerLink]="['/productdetail/'+ item.id]">
+                Edit
+              </button>
+           
         </div>
       </div>
     </div>
